@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Model checkpoints
+*.pth
+*.pt
+*.ckpt
+
+# Data (too large for GitHub)
+data/
+outputs/
+*.mp4
+*.avi
+
+# COLMAP artifacts
+colmap/
+*.db
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
