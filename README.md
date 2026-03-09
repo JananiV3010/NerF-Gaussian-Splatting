@@ -100,7 +100,7 @@ pip install nerfstudio
 
 ## Author
 
-**Janani Vaiyapuriappan**,MSE Biomedical Engineering, Johns Hopkins University  
+**Janani Vaiyapuriappan**, MSE Biomedical Engineering, Johns Hopkins University  
 [LinkedIn](https://www.linkedin.com/in/janani-vaiyapuriappan/) · [GitHub](https://github.com/JananiV3010)
 
 ---
