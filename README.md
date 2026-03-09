@@ -1,10 +1,10 @@
-# 🔬 3D Scene Reconstruction via NeRF & Gaussian Splatting
+# 3D Scene Reconstruction via NeRF & Gaussian Splatting
 
-> An end-to-end pipeline exploration for novel view synthesis using Neural Radiance Fields and Gaussian Splatting — with detailed failure analysis and MLOps learnings.
+> An end-to-end pipeline exploration for novel view synthesis using Neural Radiance Fields and Gaussian Splatting with detailed failure analysis and MLOps learnings.
 
 ---
 
-## 🧭 Overview
+## Overview
 
 This project attempts to reconstruct a 3D scene from a handheld smartphone video using **COLMAP** for camera pose estimation, followed by **NeRF** and **Gaussian Splatting** for novel view synthesis via **nerfstudio**. While the full pipeline was not completed due to COLMAP reconstruction failure, the project produced significant practical insights into real-world 3D reconstruction pipelines and MLOps debugging in headless environments.
 
@@ -12,20 +12,20 @@ This project attempts to reconstruct a 3D scene from a handheld smartphone video
 
 ---
 
-## 🎯 What Was Accomplished
+## What Was Accomplished
 
 | Stage | Status | Notes |
 |---|---|---|
-| Video capture & preprocessing | ✅ Complete | 1:55 video, 6,921 frames @ 60fps, multi-scale extraction |
-| Frame extraction (FFmpeg) | ✅ Complete | ~150–200 frames at 4 resolutions |
-| COLMAP feature extraction | ✅ Complete | SIFT features extracted (CPU mode) |
-| COLMAP feature matching | ✅ Complete | Exhaustive matching completed |
-| COLMAP sparse reconstruction | ❌ Failed | "No good initial image pair found" |
-| NeRF / Gaussian Splatting training | ❌ Blocked | Requires `transforms.json` from COLMAP |
+| Video capture & preprocessing | Complete | 1:55 video, 6,921 frames @ 60fps, multi-scale extraction |
+| Frame extraction (FFmpeg) | Complete | ~150–200 frames at 4 resolutions |
+| COLMAP feature extraction | Complete | SIFT features extracted (CPU mode) |
+| COLMAP feature matching | Complete | Exhaustive matching completed |
+| COLMAP sparse reconstruction | Failed | "No good initial image pair found" |
+| NeRF / Gaussian Splatting training | Blocked | Requires `transforms.json` from COLMAP |
 
 ---
 
-## 🔍 Root Cause Analysis
+## Root Cause Analysis
 
 **Why COLMAP failed:**
 
@@ -45,7 +45,7 @@ This project attempts to reconstruct a 3D scene from a handheld smartphone video
 
 ---
 
-## 💡 Key Learnings
+## Key Learnings
 
 1. **Capture quality matters as much as the model** — NeRF and Gaussian Splatting are only as good as the camera pose estimates. Planned circular trajectories with sufficient baseline are non-negotiable.
 2. **Headless environments need explicit GUI bypass** — always audit Qt/OpenGL dependencies before running 3D reconstruction tools in cloud environments.
@@ -54,7 +54,7 @@ This project attempts to reconstruct a 3D scene from a handheld smartphone video
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```
 nerf-gaussian-splatting/
@@ -74,7 +74,7 @@ nerf-gaussian-splatting/
 
 ---
 
-## 🚀 Setup (For Future Attempts)
+## Setup (For Future Attempts)
 
 ```bash
 git clone https://github.com/JananiV3010/nerf-gaussian-splatting.git
@@ -92,15 +92,15 @@ pip install nerfstudio
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 `Python` `nerfstudio` `COLMAP` `FFmpeg` `PyTorch` `Google Colab` `Kaggle`
 
 ---
 
-## 👩‍💻 Author
+## Author
 
-**Janani Vaiyapuriappan** — MS Biomedical Engineering, Johns Hopkins University  
+**Janani Vaiyapuriappan**,MSE Biomedical Engineering, Johns Hopkins University  
 [LinkedIn](https://www.linkedin.com/in/janani-vaiyapuriappan/) · [GitHub](https://github.com/JananiV3010)
 
 ---
